@@ -1,0 +1,80 @@
+*{
+ margin:0;
+ padding:0;
+;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    font-family: quicksand, sans-serif;
+    font-weight:200;
+    color:white;
+
+    animation: gradient 30s ease infinite;
+    
+}
+.location, 
+.temperature{
+    height:  15vh;
+    width: 30%;
+    display:flex;
+    justify-content: space-around; 
+    align-items:center;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+.location{
+    border-top: 1px solid white;
+    cursor: pointer;
+}
+
+.temperature{
+    height: 300px;
+    flex-direction:column;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size:30px;
+}
+
+.degree-section h2{
+    font-size:40px;
+    font-weight: 30;
+}
+
+.wi {
+    font-size: 70px;
+}
+
+.units {
+    font-size: 10px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
