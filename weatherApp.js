@@ -14,15 +14,16 @@ window.addEventListener('load', ()=>{
             long = position.coords.longitude;
             lat = position.coords.latitude;
             let proxy = 'https://cors-anywhere.herokuapp.com/';
-
-            const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=17e443ff35a9b00d00d9f98d295acc9f&units=metric`;
-
+ 
+            //console.log("https://api.openweathermap.org/data/2.5/weather?lat=43.771815&lon=-79.6838764&appid=17e443ff35a9b00d00d9f98d295acc9f&units=metric");
+            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=17e443ff35a9b00d00d9f98d295acc9f&units=metric`;
+            //console.log(api);
             fetch(api)
                 .then(response => { 
                     return response.json();
             })
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 const {temp} = (data.main);
                 const location = data.name;
                 const iconNum = data.weather[0].id;
